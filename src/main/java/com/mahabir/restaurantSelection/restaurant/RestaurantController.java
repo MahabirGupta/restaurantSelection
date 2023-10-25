@@ -16,7 +16,7 @@ public class RestaurantController {
     @GetMapping("restaurant-form")
     public String showRestaurantForm(Model model) {
         model.addAttribute("RestaurantForm", new RestaurantForm());
-        return "jsp/restaurant-form";
+        return "restaurant-form";
     }
 
     @PostMapping("submit-choices")
@@ -30,6 +30,6 @@ public class RestaurantController {
         String randomChoice = restaurantChoiceService.getRandomChoice();
         model.addAttribute("randomChoice", randomChoice);
 
-        return "jsp/result";
+        return "result";
     }
 }
