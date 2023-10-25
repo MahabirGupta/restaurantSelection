@@ -13,7 +13,7 @@ public class JspConfig implements WebMvcConfigurer {
     @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setPrefix("/META-INF/resources/"); // Specify the correct path to your JSP files
+        viewResolver.setPrefix("/WEB-INF/"); // Specify the correct path to your JSP files
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
